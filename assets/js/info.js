@@ -1,112 +1,118 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  const $profile = $('.profile')
 
-    var $profile = $(".profile");
-        
+  const db = {
+    'Dr. DhimanSaha': {
+      name: 'Dr. Dhiman Saha',
+      pos: 'Assistant Professor',
+      email: 'dhiman@iitbhilai.ac.in',
+      interests: ['Cryptanalysis', 'Fault Attacks', 'Keccak'],
+      url: '#'
+    },
 
-    var db = {
+    Aikata: {
+      name: 'Aikata',
+      pos: 'Undergraduate',
+      email: 'aikata@iitbhilai.ac.in',
+      interests: ['Cryptography', 'Blockchain Tech', 'Machine Learning'],
+      url: '#'
+    },
 
-        'Dr. DhimanSaha': {
-            'name':'Dr. Dhiman Saha',
-            'pos':'Assistant Professor',
-            'email': 'dhiman@iitbhilai.ac.in',
-            'interests' : ['Cryptanalysis', 'Fault Attacks', 'Keccak'],
-            'url':'#'
-        },
+    AhaanDabholkar: {
+      name: 'Ahaan Dabholkar',
+      pos: 'Undergraduate',
+      email: 'ahaand@iitbhilai.ac.in',
+      interests: ['RFID Security', 'Rowhammer Attacks', 'Hyperledger Fabric'],
+      url: 'ahaan_profile.html'
+    },
 
-        'Aikata': {
-            'name':'Aikata',
-            'pos':'Undergraduate',
-            'email': 'aikata@iitbhilai.ac.in',
-            'interests' : ['Cryptography', 'Blockchain Tech', 'Machine Learning'],
-            'url':'#'
-        },
+    PabitraPal: {
+      name: 'Pabitra Pal',
+      pos: 'Project Scientist',
+      email: 'pabipaltra@gmail.com',
+      interests: ['Cryptography', 'Watermarking', 'Data Hiding'],
+      url: '#'
+    },
 
-        'AhaanDabholkar': {
-            'name':'Ahaan Dabholkar',
-            'pos':'Undergraduate',
-            'email': 'ahaand@iitbhilai.ac.in',
-            'interests' : ['RFID Security', 'Rowhammer Attacks', 'Hyperledger Fabric'],
-            'url': 'ahaan_profile.html'
-        },
+    'Bharath V.Gottumukkala': {
+      name: 'Bharath V. Gottumukkala',
+      pos: 'Undergraduate',
+      email: 'gottumukkalab@iitbhilai.ac.in',
+      interests: ['Security', 'Automation', 'Internet Of Things'],
+      url: '#'
+    },
 
-        'PabitraPal': {
-            'name':'Pabitra Pal',
-            'pos':'Project Scientist',
-            'email': 'pabipaltra@gmail.com',
-            'interests' : ['Cryptography', 'Watermarking', 'Data Hiding'],
-            'url':'#'
-        },
+    BanashriKarmakar: {
+      name: 'Banashri Karmakar',
+      pos: 'Graduate',
+      email: 'banashrik@iitbhilai.ac.in',
+      interests: [
+        'Differential Cryptanalysis',
+        'Fault Attacks',
+        'MDS Matrix Analysis'
+      ],
+      url: '#'
+    },
 
-        'Bharath V.Gottumukkala': {
-            'name':'Bharath V. Gottumukkala',
-            'pos':'Undergraduate',
-            'email': 'gottumukkalab@iitbhilai.ac.in',
-            'interests' : ['Security', 'Automation', 'Internet Of Things'],
-            'url':'#'
-        },
+    HarshvardhanPatel: {
+      name: 'Harshvardhan Patel',
+      pos: 'Undergraduate',
+      email: 'harshvardhanp@iitbhilai.ac.in',
+      interests: [
+        'Machine Learning Security',
+        'Systems Security',
+        'Applied Cryptography'
+      ],
+      url: '#'
+    },
 
-        'BanashriKarmakar': {
-            'name':'Banashri Karmakar',
-            'pos':'Graduate',
-            'email': 'banashrik@iitbhilai.ac.in',
-            'interests' : ['Differential Cryptanalysis', 'Fault Attacks', 'MDS Matrix Analysis'],
-            'url':'#'
-        },
-
-        'HarshvardhanPatel': {
-            'name':'Harshvardhan Patel',
-            'pos':'Undergraduate',
-            'email': 'harshvardhanp@iitbhilai.ac.in',
-            'interests' : ['Machine Learning Security', 'Systems Security', 'Applied Cryptography'],
-            'url':'#'
-        },
-
-        'Aikata': {
-            'name':'Aikata',
-            'pos':'Undergraduate',
-            'email': 'aikata@iitbhilai.ac.in',
-            'interests' : ['Cryptography', 'Blockchain Tech', 'Machine Learning'],
-            'url':'#'
-        }
+    Aikata: {
+      name: 'Aikata',
+      pos: 'Undergraduate',
+      email: 'aikata@iitbhilai.ac.in',
+      interests: ['Cryptography', 'Blockchain Tech', 'Machine Learning'],
+      url: '#'
     }
+  }
 
+  function setInfo (dict) {
+    const name = dict.name
+    const pos = dict.pos
+    const email = dict.email
+    const interests = dict.interests
+    const url = dict.url
+    const $dock = $('.info')
 
-    function setInfo(dict){
+    $dock.find('.name')[0].innerText = name
+    $dock.find('.email')[0].innerText = email
+    $dock.find('.pos')[0].innerText = pos
+    $dock.find('.areasofinterest')[0].innerText = 'Areas Of Interest'
+    $dock
+      .find('.interest-list')
+      .html(
+        '<li>' +
+          interests[0] +
+          '</li><li>' +
+          interests[1] +
+          '</li><li>' +
+          interests[2] +
+          '</li>'
+      )
+    $dock.find('.button')[0].innerText = 'More...'
+    $dock.find('.button').attr('href', url)
+  }
 
-        var name = dict['name'],
-            pos = dict['pos'],
-            email = dict['email'],
-            interests = dict['interests'],
-            url  = dict['url'],
-            $dock  = $('.info');
-        
-             
-        
-         $dock.find(".name")[0].innerText = name;
-         $dock.find(".email")[0].innerText = email;
-         $dock.find(".pos")[0].innerText = pos;
-         $dock.find(".areasofinterest")[0].innerText = "Areas Of Interest";
-         $dock.find(".interest-list").html("<li>"+interests[0]+"</li><li>"+interests[1]+"</li><li>"+interests[2]+"</li>") 
-         $dock.find(".button")[0].innerText = "More...";
-         $dock.find(".button").attr('href', url);
-    }
+  function profileClick () {
+    $('.info').hide()
+    const k = $(this).find('h3').text().trim()
+    // console.log(k)
+    setInfo(db[k])
+    $('.info').fadeIn(200)
+  }
 
+  function init () {
+    $profile.on('click', profileClick)
+  }
 
-    function profileClick(){
-        $(".info").hide();
-        var k = $(this).find("h3").text().trim();
-        // console.log(k)
-        setInfo(db[k])
-        $(".info").fadeIn(200);
-    
-    }
-
-
-    function init(){
-        $profile.on('click', profileClick);
-        
-    }
-
-	init();
-  
-  })
+  init()
+})
