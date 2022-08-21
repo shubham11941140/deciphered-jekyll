@@ -80,7 +80,7 @@ $(document).ready(function(){
             url  = dict['url'],
             $dock  = $('.info');
         
-             console.log($dock.find("button")[0])
+             
         
          $dock.find(".name")[0].innerText = name;
          $dock.find(".email")[0].innerText = email;

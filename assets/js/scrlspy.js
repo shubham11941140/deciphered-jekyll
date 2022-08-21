@@ -26,9 +26,9 @@ $(document).ready(function(){
 
 
     function scrslpy_debug(){
-        console.log('scroll',$window.scrollTop());
-        console.log(contentPosList.findIndex( (element) => {var x = $window.scrollTop() + wiggleroom - element; console.log('x', x); return x> 0;}));  
-        console.log("-----------");
+        
+          
+        
     }
 
     function get_view(){
