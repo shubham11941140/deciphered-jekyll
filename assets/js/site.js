@@ -1,35 +1,37 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  const $nav = $('.navbar')
+  const $body = $('body')
+  const $window = $(window)
+  let navOffsetTop = $nav.offset().top
+  const $document = $(document)
 
-    var $nav = $('.navbar'),
-        $body = $('body'),
-        $window = $(window),
-        navOffsetTop = $nav.offset().top,
-        $document = $(document);
+  function init () {
+    $window.on('scroll', onScroll)
+    $window.on('resize', resize)
+    $window.on('scroll', parallax)
+  }
 
-    function init(){
-        $window.on('scroll', onScroll);
-        $window.on('resize', resize);
-        $window.on('scroll', parallax);
+  function resize () {
+    $body.removeClass('has-docked-nav')
+    navOffsetTop = $nav.offset().top
+    onScroll()
+  }
 
+  function onScroll () {
+    // console.log($window.scrollTop());
+    if (
+      navOffsetTop < $window.scrollTop() &&
+      !$body.hasClass('has-docked-nav')
+    ) {
+      $body.addClass('has-docked-nav')
     }
-
-
-    function resize(){
-        $body.removeClass('has-docked-nav');
-        navOffsetTop = $nav.offset().top;
-        onScroll();
+    if (
+      navOffsetTop >= $window.scrollTop() &&
+      $body.hasClass('has-docked-nav')
+    ) {
+      $body.removeClass('has-docked-nav')
     }
-    
-    function onScroll(){
-        //console.log($window.scrollTop());
-        if(navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')){
-            $body.addClass('has-docked-nav');
-        }
-        if(navOffsetTop >= $window.scrollTop() && $body.hasClass('has-docked-nav')){
-            $body.removeClass('has-docked-nav');
-        }
-    }
+  }
 
-    init();
-});
-
+  init()
+})

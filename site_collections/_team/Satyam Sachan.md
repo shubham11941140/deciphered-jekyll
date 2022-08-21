@@ -5,5 +5,4 @@ email: satyams@iitbhilai.ac.in
 dabble: Cryptanalysis, Cryptography, Blockchain
 pos: current
 layout: profile_layout
-
 ---

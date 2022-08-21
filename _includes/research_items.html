@@ -1,22 +1,21 @@
 <div class="row">
-    {% for research in {{site.research}} %}
-        <div class="research-item row">
-            <div class="four columns">
-                <img class="project-cover" src="{{research.image}}">
-            </div>
-            <div class="eight columns">
-                <h3 class="heading no-border">{{research.title}}</h3>
-                <div class="row">
-                    {{research.abstract | markdownify}}
-                </div>
-                <div class="row">
-                    <a class="button button-primary" href="{{research.url | absolute_url}}">Explore</a>
-                    {% if research.github %}
-                    <!-- <a class="github-button" href="https://github.com/theboxahaan/loauth/" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="small" data-show-count="false" aria-label="Watch theboxahaan/loauth on GitHub">Fork</a> -->
-                    {% endif %}
-                </div>
-                
-            </div>
-        </div>
-    {% endfor %}
+  {% for research in {{site.research}} %}
+  <div class="research-item row">
+    <div class="four columns">
+      <img class="project-cover" src="{{research.image}}" />
+    </div>
+    <div class="eight columns">
+      <h3 class="heading no-border">{{research.title}}</h3>
+      <div class="row">{{research.abstract | markdownify}}</div>
+      <div class="row">
+        <a class="button button-primary" href="{{research.url | absolute_url}}"
+          >Explore</a
+        >
+        {% if research.github %}
+        <!-- <a class="github-button" href="https://github.com/theboxahaan/loauth/" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="small" data-show-count="false" aria-label="Watch theboxahaan/loauth on GitHub">Fork</a> -->
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>

@@ -1,23 +1,22 @@
-.blog-item{
-    border: 1px solid #ddd;
-    background: #f2f2f2;
-    padding: 1em;
+.blog-item {
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+  padding: 1em;
+}
+.active {
+  padding: 1em;
+  border: 1px solid #ddd;
+}
+.no-margin {
+  margin-bottom: 0.4em;
+}
 
-}
-.active{
-    padding: 1em;
-    border: 1px solid #ddd ;
-}
-.no-margin{
-    margin-bottom: 0.4em;
-}
-
-.author{
-    margin-left: 0.4em;
-    padding: 0.2em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    background: #555;
-    color: #eee;
-    border-radius: 0.2em;
+.author {
+  margin-left: 0.4em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background: #555;
+  color: #eee;
+  border-radius: 0.2em;
 }

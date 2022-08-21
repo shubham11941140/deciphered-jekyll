@@ -1,11 +1,18 @@
 ---
 title: Home
-js: ['/assets/js/typewriter.js', '/assets/js/parallax.js', '/assets/js/twitter-handler.js']
-css: ['/assets/css/style_home.css']
+js:
+  [
+    "/assets/js/typewriter.js",
+    "/assets/js/parallax.js",
+    "/assets/js/twitter-handler.js",
+  ]
+css: ["/assets/css/style_home.css"]
 layout: default
 order: 1
 ---
+
 {% include navbar.html %}
+
 <section class="header">
 <div class="row">
     <div class="five columns">

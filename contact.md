@@ -4,7 +4,9 @@ order: 6
 layout: default
 css: [/assets/css/style_home.css]
 ---
+
 {% include navbar.html %}
+
 <div class="spacer-small"></div>
 <div class="row">
     <div class="eight columns">

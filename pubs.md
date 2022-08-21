@@ -4,6 +4,7 @@ order: 4
 layout: default
 css: [/assets/css/style_pubs.css]
 ---
+
 {% include navbar.html %}
 
 <div class="spacer-small"></div>

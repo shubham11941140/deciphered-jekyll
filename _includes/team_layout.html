@@ -1,194 +1,224 @@
 <div class="row">
-    <div class="row">
-        <h3>Faculty</h3>
-        {% assign past_members = site.team | where: "pos" , "faculty"%}
-        {% for card in {{past_members}} %}
-        {% assign t  = {{forloop.index0 | modulo: 2 }} %}
-        {% if  t == 0 %}
+  <div class="row">
+    <h3>Faculty</h3>
+    {% assign past_members = site.team | where: "pos" , "faculty"%} {% for card
+    in {{past_members}} %} {% assign t = {{forloop.index0 | modulo: 2 }} %} {%
+    if t == 0 %}
+  </div>
+  <div class="profile row">
+    {% endif %}
+    <div class="card six columns">
+      <div class="four columns">
+        <img class="card-image" src="{{card.image}}" />
+      </div>
+      <div class="eight columns">
+        <div class="row">
+          <div class="ten columns">
+            <span class="card heading no-border">{{card.title}}</span>
+          </div>
+          <div class="two columns">
+            <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
+            <a href="{{card.url | absolute_url}}"
+              ><span
+                class="arrow iconify"
+                data-icon="fa-solid:link"
+                data-inline="false"
+              ></span
+            ></a>
+          </div>
         </div>
-        <div class="profile row">
-        {% endif %}
-            <div class="card six columns">
-                <div class="four columns">
-                    <img class="card-image" src="{{card.image}}">
-                </div>
-                <div class="eight columns">
-                    <div class="row">
-                        <div class="ten columns">
-                            <span class="card heading no-border">{{card.title}}</span>
-
-                        </div>
-                        <div class="two columns">
-                            <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
-                            <a href="{{card.url | absolute_url}}"><span class="arrow iconify" data-icon="fa-solid:link" data-inline="false"></span></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="card post">{{card.post}}</i><br>
-                        <!-- <b class="card post">{{card.present}}</b>                         -->
-                    </div>
-                    <div class="small-margin row">
-                        <a href="mailto:{{card.email}}" class="card email">{{card.email}}</a>
-                    </div>
-                    <div class="dabble row">
-                        <div class="one columns">
-                            <span class="iconify" data-icon="mdi-test-tube" data-inline="false"></span>
-                        </div>
-                        <div class="eleven columns">
-                            <span class="card dabble">{{card.dabble}}</span>
-
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-    {% endfor %}    
-</div>
-
-<div class="row">
-    <div class="row">
-        <h3>External Collaborators</h3>
-        {% assign past_members = site.team | where: "pos" , "external"%}
-        {% for card in {{past_members}} %}
-        {% assign t  = {{forloop.index0 | modulo: 2 }} %}
-        {% if  t == 0 %}
+        <div class="row">
+          <i class="card post">{{card.post}}</i><br />
+          <!-- <b class="card post">{{card.present}}</b>                         -->
         </div>
-        <div class="profile row">
-        {% endif %}
-            <div class="card six columns">
-                <div class="four columns">
-                    <img class="card-image" src="{{card.image}}">
-                </div>
-                <div class="eight columns">
-                    <div class="row">
-                        <div class="ten columns">
-                            <span class="card heading no-border">{{card.title}}</span>
+        <div class="small-margin row">
+          <a href="mailto:{{card.email}}" class="card email">{{card.email}}</a>
+        </div>
+        <div class="dabble row">
+          <div class="one columns">
+            <span
+              class="iconify"
+              data-icon="mdi-test-tube"
+              data-inline="false"
+            ></span>
+          </div>
+          <div class="eleven columns">
+            <span class="card dabble">{{card.dabble}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                        </div>
-                        <div class="two columns">
-                            <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
-                            <a href="{{card.url | absolute_url}}"><span class="arrow iconify" data-icon="fa-solid:link" data-inline="false"></span></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="card post">{{card.post}}</i><br>
-                        <b class="card post">{{card.present}}</b>                        
-                    </div>
-                    <div class="small-margin row">
-                        <a href="mailto:{{card.email}}" class="card email">{{card.email}}</a>
-                    </div>
-                    <div class="dabble row">
-                        <div class="one columns">
-                            <span class="iconify" data-icon="mdi-test-tube" data-inline="false"></span>
-                        </div>
-                        <div class="eleven columns">
-                            <span class="card dabble">{{card.dabble}}</span>
+    {% endfor %}
+  </div>
 
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-    {% endfor %}    
-</div>
-
-
-
-<div class="row">
+  <div class="row">
     <div class="row">
+      <h3>External Collaborators</h3>
+      {% assign past_members = site.team | where: "pos" , "external"%} {% for
+      card in {{past_members}} %} {% assign t = {{forloop.index0 | modulo: 2 }}
+      %} {% if t == 0 %}
+    </div>
+    <div class="profile row">
+      {% endif %}
+      <div class="card six columns">
+        <div class="four columns">
+          <img class="card-image" src="{{card.image}}" />
+        </div>
+        <div class="eight columns">
+          <div class="row">
+            <div class="ten columns">
+              <span class="card heading no-border">{{card.title}}</span>
+            </div>
+            <div class="two columns">
+              <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
+              <a href="{{card.url | absolute_url}}"
+                ><span
+                  class="arrow iconify"
+                  data-icon="fa-solid:link"
+                  data-inline="false"
+                ></span
+              ></a>
+            </div>
+          </div>
+          <div class="row">
+            <i class="card post">{{card.post}}</i><br />
+            <b class="card post">{{card.present}}</b>
+          </div>
+          <div class="small-margin row">
+            <a href="mailto:{{card.email}}" class="card email"
+              >{{card.email}}</a
+            >
+          </div>
+          <div class="dabble row">
+            <div class="one columns">
+              <span
+                class="iconify"
+                data-icon="mdi-test-tube"
+                data-inline="false"
+              ></span>
+            </div>
+            <div class="eleven columns">
+              <span class="card dabble">{{card.dabble}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="row">
         <h3>Current Members</h3>
-        {% assign current_members = site.team | where: "pos" , "current"%}
-        {% for card in {{current_members}} %}
-        {% assign t  = {{forloop.index0 | modulo: 2 }} %}
-        {% if  t == 0 %}
+        {% assign current_members = site.team | where: "pos" , "current"%} {%
+        for card in {{current_members}} %} {% assign t = {{forloop.index0 |
+        modulo: 2 }} %} {% if t == 0 %}
+      </div>
+      <div class="profile row">
+        {% endif %}
+        <div class="card six columns">
+          <div class="four columns">
+            <img class="card-image" src="{{card.image}}" />
+          </div>
+          <div class="eight columns">
+            <div class="row">
+              <div class="ten columns">
+                <span class="card heading no-border">{{card.title}}</span>
+              </div>
+              <div class="two columns">
+                <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
+                <a href="{{card.url | absolute_url}}"
+                  ><span
+                    class="arrow iconify"
+                    data-icon="fa-solid:link"
+                    data-inline="false"
+                  ></span
+                ></a>
+              </div>
+            </div>
+            <div class="row">
+              <i class="card post">{{card.post}}</i>
+            </div>
+            <div class="small-margin row">
+              <a href="mailto:{{card.email}}" class="card email"
+                >{{card.email}}</a
+              >
+            </div>
+            <div class="dabble row">
+              <div class="one columns">
+                <span
+                  class="iconify"
+                  data-icon="mdi-test-tube"
+                  data-inline="false"
+                ></span>
+              </div>
+              <div class="eleven columns">
+                <span class="card dabble">{{card.dabble}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <h3>Alumni</h3>
+          {% assign past_members = site.team | where: "pos" , "alumni"%} {% for
+          card in {{past_members}} %} {% assign t = {{forloop.index0 | modulo: 2
+          }} %} {% if t == 0 %}
         </div>
         <div class="profile row">
-        {% endif %}
-            <div class="card six columns">
-                <div class="four columns">
-                    <img class="card-image" src="{{card.image}}">
-                </div>
-                <div class="eight columns">
-                    <div class="row">
-                        <div class="ten columns">
-                            <span class="card heading no-border">{{card.title}}</span>
-
-                        </div>
-                        <div class="two columns">
-                            <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
-                            <a href="{{card.url | absolute_url}}"><span class="arrow iconify" data-icon="fa-solid:link" data-inline="false"></span></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="card post">{{card.post}}</i>
-                        
-                    </div>
-                    <div class="small-margin row">
-                        <a href="mailto:{{card.email}}" class="card email">{{card.email}}</a>
-                    </div>
-                    <div class="dabble row">
-                        <div class="one columns">
-                            <span class="iconify" data-icon="mdi-test-tube" data-inline="false"></span>
-                        </div>
-                        <div class="eleven columns">
-                            <span class="card dabble">{{card.dabble}}</span>
-
-                        </div>
-                    </div>
-                </div>
-                
+          {% endif %}
+          <div class="card six columns">
+            <div class="four columns">
+              <img class="card-image" src="{{card.image}}" />
             </div>
+            <div class="eight columns">
+              <div class="row">
+                <div class="ten columns">
+                  <span class="card heading no-border">{{card.title}}</span>
+                </div>
+                <div class="two columns">
+                  <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
+                  <a href="{{card.url | absolute_url}}"
+                    ><span
+                      class="arrow iconify"
+                      data-icon="fa-solid:link"
+                      data-inline="false"
+                    ></span
+                  ></a>
+                </div>
+              </div>
+              <div class="row">
+                <i class="card post">{{card.post}}</i><br />
+                <b class="card post">{{card.present}}</b>
+              </div>
+              <div class="small-margin row">
+                <a href="mailto:{{card.email}}" class="card email"
+                  >{{card.email}}</a
+                >
+              </div>
+              <div class="dabble row">
+                <div class="one columns">
+                  <span
+                    class="iconify"
+                    data-icon="mdi-test-tube"
+                    data-inline="false"
+                  ></span>
+                </div>
+                <div class="eleven columns">
+                  <span class="card dabble">{{card.dabble}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    {% endfor %}    
-</div>
-
-<div class="row">
-    <div class="row">
-        <h3>Alumni</h3>
-        {% assign past_members = site.team | where: "pos" , "alumni"%}
-        {% for card in {{past_members}} %}
-        {% assign t  = {{forloop.index0 | modulo: 2 }} %}
-        {% if  t == 0 %}
+          {% endfor %}
         </div>
-        <div class="profile row">
-        {% endif %}
-            <div class="card six columns">
-                <div class="four columns">
-                    <img class="card-image" src="{{card.image}}">
-                </div>
-                <div class="eight columns">
-                    <div class="row">
-                        <div class="ten columns">
-                            <span class="card heading no-border">{{card.title}}</span>
-
-                        </div>
-                        <div class="two columns">
-                            <!-- <span class="arrow iconify" data-icon="eva:external-link-fill" data-inline="false"></span> -->
-                            <a href="{{card.url | absolute_url}}"><span class="arrow iconify" data-icon="fa-solid:link" data-inline="false"></span></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="card post">{{card.post}}</i><br>
-                        <b class="card post">{{card.present}}</b>                        
-                    </div>
-                    <div class="small-margin row">
-                        <a href="mailto:{{card.email}}" class="card email">{{card.email}}</a>
-                    </div>
-                    <div class="dabble row">
-                        <div class="one columns">
-                            <span class="iconify" data-icon="mdi-test-tube" data-inline="false"></span>
-                        </div>
-                        <div class="eleven columns">
-                            <span class="card dabble">{{card.dabble}}</span>
-
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-    {% endfor %}    
+      </div>
+    </div>
+  </div>
 </div>
-

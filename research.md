@@ -1,10 +1,12 @@
 ---
-title: Research 
+title: Research
 order: 2
 layout: default
-css: ['/assets/css/style_research.css']
+css: ["/assets/css/style_research.css"]
 ---
+
 {% include navbar.html %}
+
 <div class="spacer-small"></div>
 <div class="row">
     <h3 class="heading">Research At de.ci.phe.red LABS</h3>

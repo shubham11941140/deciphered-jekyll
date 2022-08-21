@@ -1,15 +1,15 @@
-.cover-img{
-    height: 300px;
-    display: flex;
+.cover-img {
+  height: 300px;
+  display: flex;
 }
 .cover-img > img {
-    object-fit: cover;
-    max-width: 100%;
+  object-fit: cover;
+  max-width: 100%;
 }
-.profile-pic{
-    max-width: 100%;
-    margin-top: -100px;
-    margin-left: 11px;
-    box-shadow: -5px -5px 15px -4px black;
-    margin-bottom: 2em;
+.profile-pic {
+  max-width: 100%;
+  margin-top: -100px;
+  margin-left: 11px;
+  box-shadow: -5px -5px 15px -4px black;
+  margin-bottom: 2em;
 }
