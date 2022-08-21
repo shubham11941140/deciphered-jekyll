@@ -1,11 +1,13 @@
 <div class="nav-spacer"></div>
 <nav class="navbar">
-            <div class="container">
-                <ul class="navbar-list">
-                    {% assign mypages = site.pages | sort: "order" %}
-                    {% for page in mypages %}
-                    <a href = "{{page.url | absolute_url }}" class="navbar-item"><li>{{page.title | upcase}}</li></a>
-                    {% endfor %}
-                </ul>
-            </div>
+  <div class="container">
+    <ul class="navbar-list">
+      {% assign mypages = site.pages | sort: "order" %} {% for page in mypages
+      %}
+      <a href="{{page.url | absolute_url }}" class="navbar-item"
+        ><li>{{page.title | upcase}}</li></a
+      >
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

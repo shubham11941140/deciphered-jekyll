@@ -1,12 +1,12 @@
 <div class="news-container row">
-    {% for news in site.categories.news limit:4 %}
-        <div class="news-item row">
-            <h3 class="heading no-border no-margin">{{news.date | date: '%B %d, %Y'}}</h3>
-            <div class="row no-margin">
-                {{news.content}}
-            </div>
-        </div>
-    {% endfor %}
-    <!-- <div class="spacer-small"></div> -->
-    <a class="button" href="/contact.html">See All ...</a>
+  {% for news in site.categories.news limit:4 %}
+  <div class="news-item row">
+    <h3 class="heading no-border no-margin">
+      {{news.date | date: '%B %d, %Y'}}
+    </h3>
+    <div class="row no-margin">{{news.content}}</div>
+  </div>
+  {% endfor %}
+  <!-- <div class="spacer-small"></div> -->
+  <a class="button" href="/contact.html">See All ...</a>
 </div>

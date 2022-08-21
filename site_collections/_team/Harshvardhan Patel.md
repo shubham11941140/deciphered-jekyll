@@ -6,5 +6,4 @@ email: harshvardhanp@iitbhilai.ac.in
 dabble: Cyber Security Using Machine Learning.
 pos: alumni
 layout: profile_layout
-
 ---

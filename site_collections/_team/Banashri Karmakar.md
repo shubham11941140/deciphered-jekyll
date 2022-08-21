@@ -6,5 +6,4 @@ email: banashrik@iitbhilai.ac.in
 dabble: Differential Cryptanalysis of Symmetric Key Cryptography, Fault Attacks, Analysis of MDS Matrices
 pos: alumni
 layout: profile_layout
-
 ---
